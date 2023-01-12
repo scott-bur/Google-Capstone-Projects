@@ -4,9 +4,7 @@
      December 2022
 */
 
-CREATE SCHEMA cyclistic CHARSET utf8mb4;
-SET GLOBAL local_infile = 1; 
-SET sql_mode = '';
+CREATE SCHEMA cyclistic;
 USE cyclistic;
 
 -- create december 2021 table
