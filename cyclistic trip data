@@ -449,10 +449,10 @@ WHERE TIMESTAMPDIFF(MINUTE,started_at,ended_at) < 1;
 # 27840 row(s) affected
 
 DELETE FROM trip_data 
-WHERE
-    TIMESTAMPDIFF(HOUR,started_at, ended_at) >= 24;
+WHERE TIMESTAMPDIFF(HOUR,started_at, ended_at) >= 24;
 # 11663 row(s) affected
 
 -- Count total records after deletion
 SELECT COUNT(*) FROM trip_data;
 # 5,693,948 bike-share records
+
