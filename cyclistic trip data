@@ -4,7 +4,9 @@
      December 2022
 */
 
-CREATE SCHEMA cyclistic;
+CREATE SCHEMA cyclistic CHARSET utf8mb4;
+SET GLOBAL local_infile = 1; 
+SET sql_mode = '';
 USE cyclistic;
 
 -- create december 2021 table
@@ -14,10 +16,10 @@ CREATE TABLE december_2021 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -41,10 +43,10 @@ CREATE TABLE january_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -68,10 +70,10 @@ CREATE TABLE february_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -95,10 +97,10 @@ CREATE TABLE march_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -122,10 +124,10 @@ CREATE TABLE april_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -149,10 +151,10 @@ CREATE TABLE may_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -176,10 +178,10 @@ CREATE TABLE june_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -203,10 +205,10 @@ CREATE TABLE july_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -230,10 +232,10 @@ CREATE TABLE august_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -257,10 +259,10 @@ CREATE TABLE september_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -284,10 +286,10 @@ CREATE TABLE october_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -311,10 +313,10 @@ CREATE TABLE november_2022 (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -338,10 +340,10 @@ CREATE TABLE trip_data (
     rideable_type VARCHAR(20),
     started_at DATETIME,
     ended_at DATETIME,
-    start_station_name VARCHAR(100) DEFAULT NULL,
-    start_station_id VARCHAR(100) DEFAULT NULL,
-    end_station_name VARCHAR(100) DEFAULT NULL,
-    end_station_id VARCHAR(100) DEFAULT NULL,
+    start_station_name VARCHAR(100),
+    start_station_id VARCHAR(100),
+    end_station_name VARCHAR(100),
+    end_station_id VARCHAR(100),
     start_lat FLOAT,
     start_lng FLOAT,
     end_lat FLOAT,
@@ -426,9 +428,10 @@ SELECT
 FROM november_2022
 ;
 
+
 -- Count number of records 
 SELECT COUNT(*) FROM trip_data;
-# 5,733,451 bike-share records matches CSV count
+# 5,733,451 bike-share records
 
 -- Check for distinct values
 SELECT DISTINCT rideable_type
@@ -439,3 +442,17 @@ FROM trip_data;
 SELECT DISTINCT member_casual
 FROM trip_data;
 # member, casual
+
+-- Delete rows that do not fit in our ride definition
+DELETE FROM trip_data
+WHERE TIMESTAMPDIFF(MINUTE,started_at,ended_at) < 1;
+# 27840 row(s) affected
+
+DELETE FROM trip_data 
+WHERE
+    TIMESTAMPDIFF(HOUR,started_at, ended_at) >= 24;
+# 11663 row(s) affected
+
+-- Count total records after deletion
+SELECT COUNT(*) FROM trip_data;
+# 5,693,948 bike-share records
